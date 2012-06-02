@@ -8,7 +8,7 @@
 	  	<%= link_to "Log out", log_out_url %>
 	  <% else %>
 	  	<%= link_to "Sign up", new_volunteer_url %> or
-	  	<%= link_to "log in", log_in_url %>
+	  	<%= link_to "log in", log_in_url  %>
 	  <% end %>
 
 		<% if flash[:notice] %>
@@ -16,5 +16,5 @@
 		  <%= flash[:notice] %>
 		  </p>
 		<% end %>
-	
-</header>
+	</div>
+</header>	

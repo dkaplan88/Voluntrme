@@ -1,17 +1,35 @@
 header {
-	background: #f6c275;
-	color: #020dca;
+	background: #0096EF;
+	color: black;
+	height:80px;
+}
+
+header a {
+	text-decoration:none;
+	color: #BF2C22;
+}
+
+.user_nav {
+	color:black;
 }
 
 body{
-	background: #38f67c;
+	background: white;
+}
 
+.org {
+	background:#31D921;
+}
+
+.org a {
+	text-decoration:none;
+	color: #BF2C22;
 }
 
 h1 {
-	color: #020dca;
-	font-family: fantasy;
-	margin-left: 40%;
+	text-align:center;
+	color: black;
+	font-family: font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 th {
@@ -19,7 +37,7 @@ th {
 }
 
 td {
-    border-bottom: 1px solid black;
+  border-bottom: 1px solid black;
 	border-right: 1px solid black;
 	border-left: 1px solid black;
 	font-family: didot;
