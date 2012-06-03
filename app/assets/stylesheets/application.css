@@ -26,6 +26,10 @@ body{
 	color: #BF2C22;
 }
 
+a {
+	text-decoration:none;
+}
+
 h1 {
 	text-align:center;
 	color: black;

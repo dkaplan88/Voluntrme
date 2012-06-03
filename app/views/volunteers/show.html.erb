@@ -1,23 +1,57 @@
 <% if session[:volunteer] == @volunteer.id %>
-<h1>Hello <%= @volunteer.first_name %></h1>
-<p>Name: <%= @volunteer.first_name %> <%= @volunteer.last_name %></p>
-<p>Email: <%= @volunteer.email %></p>
-<p>Phone: <%= @volunteer.phone_number %></p><br>
 
-<ol>Volunteering at the following Events:<br><br>
+<h1>Hello <%= @volunteer.first_name %></h1>
+<p><b>Name:</b> <%= @volunteer.first_name %> <%= @volunteer.last_name %></p>
+<p><b>Email:</b> <%= @volunteer.email %></p>
+<p><b>Phone:</b> <%= @volunteer.phone_number %></p><br>
+
+<p>You are volunteering at the following events:<br><br>
+
+<table>
+	<tr>
+		<th>Event Name</th>
+		<th>Organization</th>
+		<th>Date and Time</th>
+	</tr>
 	<% @volunteer.registrations.each do |r| %>
-	<li><%=r.event.name%></li>
+	<tr>	
+		<td><%= link_to r.event.name, event_url(r.event.id)%></td>
+		
+		<% @volunteer.events.each do |e| %>	
+		<td><%= link_to e.organization.name, organization_url(e.organization_id)%></td>
+		<% end %>
+		
+		<td>#</td>
+	</tr>
 	<%end%>
-</ol>
+	
+</table>
 
 <%else%>
 
+<p><b>Name:</b> <%= @volunteer.first_name %> <%= @volunteer.last_name %></p>
 
-<ol><%=@volunteer.first_name%> is volunteering at the following Events:<br><br>
+<p><b><%=@volunteer.first_name%></b> is volunteering at the following events:<br><br>
+
+<table>
+	<tr>
+		<th>Event Name</th>
+		<th>Organization</th>
+		<th>Date and Time</th>
+	</tr>
 	<% @volunteer.registrations.each do |r| %>
-	<li><%=r.event.name%></li>
+	<tr>	
+		<td><%= link_to r.event.name, event_url(r.event.id)%></td>
+		
+		<% @volunteer.events.each do |e| %>	
+		<td><%= link_to e.organization.name, organization_url(e.organization_id)%></td>
+		<% end %>
+		
+		<td>#</td>
+	</tr>
 	<%end%>
-</ol>
+	
+</table>
 
 <%end%>
 
