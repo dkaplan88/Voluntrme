@@ -1,4 +1,24 @@
+<% if session[:volunteer] == @volunteer.id %>
 <h1>Hello <%= @volunteer.first_name %></h1>
 <p>Name: <%= @volunteer.first_name %> <%= @volunteer.last_name %></p>
 <p>Email: <%= @volunteer.email %></p>
-<p>Phone: <%= @volunteer.phone_number %></p>
+<p>Phone: <%= @volunteer.phone_number %></p><br>
+
+<ol>Volunteering at the following Events:<br><br>
+	<% @volunteer.registrations.each do |r| %>
+	<li><%=r.event.name%></li>
+	<%end%>
+</ol>
+
+<%else%>
+
+
+<ol><%=@volunteer.first_name%> is volunteering at the following Events:<br><br>
+	<% @volunteer.registrations.each do |r| %>
+	<li><%=r.event.name%></li>
+	<%end%>
+</ol>
+
+<%end%>
+
+<p><%= link_to "Organizations", organizations_url%> | <%= link_to "Events", events_url %></p>
