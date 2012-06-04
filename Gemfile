@@ -11,6 +11,9 @@ gem 'quiet_assets'
 gem 'omniauth-facebook'
 gem 'fb_graph'
 
+gem 'will_paginate', '3.0.3'
+gem 'faker', '1.0.1'
+
 # gem "bcrypt-ruby", :require => "bcrypt"
 
 # Gems used only for assets and not required

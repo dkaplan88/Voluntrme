@@ -1,0 +1,5 @@
+<%= form_for(current_volunteer.relationships.build(followed_id: @volunteer.id),
+             remote: true) do |f| %>
+  <div><%= f.hidden_field :followed_id %></div>
+  <%= f.submit "Follow" %>
+<% end %>

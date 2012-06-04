@@ -1,3 +1,8 @@
+<%= render 'shared/stats' %>
+
+<!-- if signed_in? -->
+<%= render 'follow_form'  %>
+
 <% if session[:volunteer] == @volunteer.id %>
 
 <h1>Hello <%= @volunteer.first_name %></h1>

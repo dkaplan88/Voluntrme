@@ -6,6 +6,24 @@ class Volunteer < ActiveRecord::Base
   has_many :registrations
   has_many :events, through: :registrations
   
+  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  has_many :followed_volunteers, through: :relationships, source: :followed
+  
+  has_many :reverse_relationships, foreign_key: "followed_id", class_name: "Relationship", dependent: :destroy
+  has_many :followers, through: :reverse_relationships, source: :follower
+  
+  def following?(other_volunteer)
+    relationships.find_by_followed_id(other_volunteer.id)
+  end
+  
+  def follow!(other_volunteer)
+    relationships.create!(followed_id: other_volunteer.id)
+  end
+  
+  def unfollow!(other_volunteer)
+    relationships.find_by_followed_id(other_volunteer.id).destroy
+  end
+  
   def self.create_with_omniauth(auth)
       create! do |volunteer|
         volunteer.provider = auth['provider']

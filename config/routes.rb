@@ -7,8 +7,15 @@ Voluntrme::Application.routes.draw do
   resources :organizations
 
   resources :registrations
-
-  resources :volunteers
+  
+  resources :volunteers do
+       member do
+         get :following, :followers
+       end
+   end
+  
+   resources :relationships, only: [:create, :destroy]
+  
   
   match '/auth/:provider/callback' => 'volunteers#create'
   
