@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Voluntr.ME</title>
+    <!--[if lt IE 9]>
+    <script src="javascripts/shiv.js"></script>
+    <![endif]-->
+    <%= stylesheet_link_tag "landings.css" %>
+    <!-- <link rel="stylesheet" href="landings.css.scss">     -->
+  </head>
+  <body>
+    <div class="stuff">
+      <header>
+        <p>You like your <span>friends</span>.</p> 
+        <p1>You like helping <span>others</span>.</p1>
+        <p1>Let's do both.</p1>
+        <h1>Voluntr.<span>ME</span></h1>
+        <ul>
+          <li>Login: </li>
+          <li><%= link_to image_tag('facebook_32.png'), new_volunteer_url %></li>
+          <li><%= link_to image_tag('twitter_32.png'), '#' %></li>
+          <li><%= link_to image_tag('email_32.png'), '#' %></li>
+        </ul>
+      </header>
+      <div class="blank_box"></div>
+      <footer>
+        <nav>
+          <ul>
+            <li><a href="#">Home</li>
+            <li><a href="#">About Us</li>
+            <li><a href="#">Contact Us</li>
+            <li>Copyright Voluntr.ME</li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
+    
+  </body>
+</html>
