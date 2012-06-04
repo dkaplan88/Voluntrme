@@ -12,7 +12,7 @@
 
 <p>
   <b>Org:</b>
-  <%= @event.org_id %>
+  <%= @event.organization.name %>
 </p>
 
 <p>
@@ -24,6 +24,14 @@
   <b>Category:</b>
   <%= @event.category %>
 </p>
+
+<h3><%= link_to "Sign Up for Event", new_registration_url(event_id: @event.id, volunteer_id: session[:volunteer]) %></h3>
+
+<h4>List of the good people helping us out:</h4>
+<%@event.registrations.all.each do |r| %>
+<li><%= link_to r.volunteer.first_name, volunteer_url(r.volunteer_id)%></li>
+	
+<%end%><br>
 
 
 <%= link_to 'Edit', edit_event_path(@event) %> |

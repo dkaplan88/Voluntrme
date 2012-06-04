@@ -1,0 +1,49 @@
+header {
+	background: #0096EF;
+	color: black;
+	height:100px;
+}
+
+header a {
+	text-decoration:none;
+	color: #BF2C22;
+}
+
+.user_nav {
+	color:black;
+}
+
+body{
+	background: white;
+}
+
+.org {
+	background:#31D921;
+}
+
+.org a {
+	text-decoration:none;
+	color: #BF2C22;
+}
+
+a {
+	text-decoration:none;
+}
+
+h1 {
+	text-align:center;
+	color: black;
+	font-family: font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+th {
+	border-bottom: 2px solid black;
+}
+
+td {
+  border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	font-family: didot;
+	padding: 5px;
+}

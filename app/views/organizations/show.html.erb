@@ -34,7 +34,7 @@
 	</tr>
 <% @organization.events.each do |e| %>
 	<tr>
-		<td><%= e.name %></td>
+		<td><%= link_to e.name, event_url(e.id) %></td>
 		<td><%= e.description %></td>
 		<td><%= e.location %></td>
 	</tr>
