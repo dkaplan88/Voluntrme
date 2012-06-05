@@ -3,7 +3,7 @@ class EventsController < ApplicationController
     @events = Event.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html 
       format.json { render json: @events }
     end
   end
@@ -12,7 +12,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html 
       format.json { render json: @event }
     end
   end
@@ -21,7 +21,7 @@ class EventsController < ApplicationController
     @event = Event.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html 
       format.json { render json: @event }
     end
   end

@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user = Volunteer.find_by_email(params[:email])
     if user
       if user.authenticate(params[:password])
-        session[:volunteer] = user.id
+        session[:volunteer_id] = user.id
         redirect_to root_url, notice: "Logged in!"
       else
         redirect_to root_url, notice: "Invalid email or password"
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
   end
   
   def destroy
-    session[:user_id] = nil
+    session[:volunteer_id] = nil
     redirect_to log_in_url, :notice => "Logged out!"
   end
 end

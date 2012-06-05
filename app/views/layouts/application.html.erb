@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Voluntrme</title>
+  <title>Voluntr.ME</title>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag :application %>
   <%= csrf_meta_tag %>
   
 </head>
+
+<header>
+  <p><%= link_to "Voluntr.ME", events_url %></p>
+  <div id="search">
+    <form action="<%= events_url %>" method="get">
+      <label for="keyword">Search:</label>
+      <input type="text" name="keyword" placeholder="Search for cool stuff" size="30">
+    </form>
+  </div>
+  <div id="user_nav">
+	  <% if session[:volunteer_id] %>
+	  	Logged in as <%=current.name%><br>
+			<%= link_to "My Profile Page", volunteer_url(session[:volunteer_id]) %> | 
+	  	<%= link_to "Log out", log_out_url %>
+	  <% else %>
+	  	<%= link_to "Sign up", new_volunteer_url %> or
+	  	<%= link_to "log in", log_in_url  %>
+	  <% end %>
+
+		<% if flash[:notice] %>
+		  <p style="color: white; background: red; padding: 4px">
+		  <%= flash[:notice] %>
+		  </p>
+		<% end %>
+	</div>    
+</header>
+
 <body>
 		<%= render 'layouts/header', :except => "landings/index.html.erb" %>
 
