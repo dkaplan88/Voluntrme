@@ -17,19 +17,19 @@ class VolunteersController < ApplicationController
   end
   
   def new
-    redirect_to '/auth/facebook'
-  end
-  
-  def create 
-    auth = request.env["omniauth.auth"]
-    volunteer = Volunteer.where(:provider => auth['provider'], 
-                       :uid => auth['uid']).first || Volunteer.create_with_omniauth(auth)
-    session[:volunteer_id] = volunteer.id
-    redirect_to events_url, :notice => "You're in. Now go change the world!"
-  end
+      redirect_to '/auth/facebook'
+    end
+   
+   def create 
+     auth = request.env["omniauth.auth"]
+     volunteer = Volunteer.where(:provider => auth['provider'], 
+                        :uid => auth['uid']).first || Volunteer.create_with_omniauth(auth)
+     session[:volunteer_id] = volunteer.id
+     redirect_to events_url, :notice => "You're in. Now go change the world!"
+   end
   
   def show
-    @volunteer = Volunteer.find(session[:volunteer_id])
+    @volunteer = Volunteer.find(params[:id])
   end
   
   private

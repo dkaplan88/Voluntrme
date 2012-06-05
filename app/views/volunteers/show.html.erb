@@ -3,7 +3,7 @@
 <!-- if signed_in? -->
 <%= render 'follow_form'  %>
 
-<% if session[:volunteer] == @volunteer.id %>
+<% if session[:volunteer_id] == @volunteer.id %>
 
 <h1>Hello <%= @volunteer.first_name %></h1>
 <p><b>Name:</b> <%= @volunteer.first_name %> <%= @volunteer.last_name %></p>

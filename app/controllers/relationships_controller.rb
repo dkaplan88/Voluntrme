@@ -3,7 +3,7 @@ class RelationshipsController < ApplicationController
 
   def create
     @volunteer = Volunteer.find(params[:relationship][:followed_id])
-    current_volunteer.follow!(@volunteer)
+    Volunteer.find_by_id(session[:volunteer_id]).follow!(@volunteer)
     respond_to do |format|
       format.html { redirect_to @volunteer }
       format.js
@@ -12,7 +12,7 @@ class RelationshipsController < ApplicationController
 
   def destroy
     @volunteer = Relationship.find(params[:id]).followed
-    current_volunteer.unfollow!(@volunteer)
+    Volunteer.find_by_id(session[:volunteer_id]).unfollow!(@volunteer)
     respond_to do |format|
       format.html { redirect_to @volunteer }
       format.js
