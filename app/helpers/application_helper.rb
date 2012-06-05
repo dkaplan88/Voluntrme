@@ -1,6 +1,6 @@
 module ApplicationHelper
   
   def current
-    Volunteer.find_by_id(session[:user_id])
+    Volunteer.find_by_id(session[:volunteer_id])
   end
 end

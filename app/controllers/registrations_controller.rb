@@ -1,6 +1,4 @@
 class RegistrationsController < ApplicationController
-  # GET /registrations
-  # GET /registrations.json
   def index
     @registrations = Registration.all
 
@@ -10,8 +8,6 @@ class RegistrationsController < ApplicationController
     end
   end
 
-  # GET /registrations/1
-  # GET /registrations/1.json
   def show
     @registration = Registration.find(params[:id])
 
@@ -21,8 +17,6 @@ class RegistrationsController < ApplicationController
     end
   end
 
-  # GET /registrations/new
-  # GET /registrations/new.json
   def new
     @registration = Registration.new
 
@@ -32,19 +26,18 @@ class RegistrationsController < ApplicationController
     end
   end
 
-  # GET /registrations/1/edit
   def edit
     @registration = Registration.find(params[:id])
   end
 
-  # POST /registrations
-  # POST /registrations.json
   def create
-    @registration = Registration.new(params[:registration])
+    @registration = Registration.new
+    @registration.volunteer_id = params[:volunteer_id]
+    @registration.event_id = params[:event_id]
 
     respond_to do |format|
       if @registration.save
-        format.html { redirect_to @registration, notice: 'Registration was successfully created.' }
+        format.html { redirect_to organizations_url, notice: 'Registration was successfully created.' }
         format.json { render json: @registration, status: :created, location: @registration }
       else
         format.html { render action: "new" }
@@ -53,8 +46,6 @@ class RegistrationsController < ApplicationController
     end
   end
 
-  # PUT /registrations/1
-  # PUT /registrations/1.json
   def update
     @registration = Registration.find(params[:id])
 
@@ -69,8 +60,6 @@ class RegistrationsController < ApplicationController
     end
   end
 
-  # DELETE /registrations/1
-  # DELETE /registrations/1.json
   def destroy
     @registration = Registration.find(params[:id])
     @registration.destroy

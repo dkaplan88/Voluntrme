@@ -25,11 +25,11 @@ class VolunteersController < ApplicationController
     volunteer = Volunteer.where(:provider => auth['provider'], 
                        :uid => auth['uid']).first || Volunteer.create_with_omniauth(auth)
     session[:volunteer_id] = volunteer.id
-    redirect_to root_url, :notice => "You're in. Now go change the world!"
+    redirect_to events_url, :notice => "You're in. Now go change the world!"
   end
   
   def show
-    @volunteer = Volunteer.find(params[:id])
+    @volunteer = Volunteer.find(session[:volunteer_id])
   end
   
   private
