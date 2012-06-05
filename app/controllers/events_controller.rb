@@ -1,6 +1,10 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
+    if params[:keyword].nil?
+      @events = Event.all
+    else
+      @events = Event.where("LOWER(category) LIKE ?", "%#{params[:keyword].downcase}%") && Event.where("LOWER(name) LIKE ?", "%#{params[:keyword].downcase}%") && Event.where("LOWER(description) LIKE ?", "%#{params[:keyword].downcase}%")
+    end
 
     respond_to do |format|
       format.html 
