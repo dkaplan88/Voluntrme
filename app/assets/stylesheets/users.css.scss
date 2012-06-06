@@ -1,3 +1,110 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.header {
+/*	height: 100px;*/
+	line-height: 1.6;
+	width:940px;
+}
+
+
+.header p {
+	background: #FF2E2E;
+	font-size: 46px;
+	/*line-height:88px;*/
+	color: white;
+/*	height: 100px;*/
+/*	position: relative;
+*/	
+	/*margin-top: 0; 
+		margin-bottom: 0;
+		margin-left: auto;
+		margin-right: auto;*/
+	padding: 0 0 0 0 ;
+	/*	max-width: auto; 	*/
+	text-align: left;
+	font-family: 'Helvetica';
+	text-decoration: none;
+}
+
+#user_nav {
+	color: white;
+	font-size: 14px;
+/*	position: absolute;
+*/	float: right;
+	text-decoration: none;
+	margin: -40px 0 0 1200px ;
+}
+
+.header #user_nav a {
+	color:white;
+}
+
+.header #search {	
+	float: right;
+/*	position: absolute;
+*/	
+	margin: -65px 0 0 1145px;
+	color: white;
+}
+
+
+.wrapper { 
+	width:940px; 
+	margin: 0 auto -10px; 
+	position:relative; 
+	text-align:left; 
+}
+
+.left_sidebar p {
+	font-size:50px;
+	width: 150px;
+	height: 1000px;
+	background: #7A8C37;
+	color: white;
+	position: relative;
+	right: auto;
+	float:left;
+	margin: 0 0 0 0 ;
+	padding: 0 0 0 0 ;
+	
+}
+
+.left_sidebar p1 img {
+	float:left;
+	margin: 30px 0 0 -100px;
+/*	position: absolute;*/	
+	height: 80px;
+	width: 100px;
+}
+
+.right_sidebar p {
+	font-size:50px;
+	width: 100px;
+/*	width: 150px;*/
+	height: 1000px;
+	background: #7A8C37;
+	color: white;
+	position: relative;
+	right: auto;
+	float:right;
+	margin: 0 0 0 0 ;
+	padding: 0 0 0 0;
+}
+
+
+.table_body {
+/*	width: auto;*/	
+	width:760px;
+/*	margin-left: auto;
+	margin-right: auto;*/
+	background: #D9D7B8;
+	/*margin-top: 0px;*/
+/*	line-height: 40px;*/
+}
+
+.table_body a {
+/*	text-decoration: none;*/
+	color: black;
+}
+

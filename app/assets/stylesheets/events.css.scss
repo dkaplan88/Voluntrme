@@ -2,8 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div {
-	
+.wrapper { 
+	width:940px; 
+	margin: 0 auto -10px; 
+	position:relative; 
+	text-align:left; 
 }
 
 .left_sidebar p {
@@ -23,14 +26,15 @@ div {
 .left_sidebar p1 img {
 	float:left;
 	margin: 30px 0 0 -100px;
-	position: absolute;
+/*	position: absolute;*/	
 	height: 80px;
-	width: 80px;
+	width: 100px;
 }
 
 .right_sidebar p {
 	font-size:50px;
-	width: 150px;
+	width: 100px;
+/*	width: 150px;*/
 	height: 1000px;
 	background: #7A8C37;
 	color: white;
@@ -43,12 +47,13 @@ div {
 
 
 .table_body {
-	width: auto;
-	margin-left: auto;
-	margin-right: auto;
+/*	width: auto;*/	
+	width:760px;
+/*	margin-left: auto;
+	margin-right: auto;*/
 	background: #D9D7B8;
-	margin-top: 0px;
-	line-height: 40px;
+	/*margin-top: 0px;*/
+/*	line-height: 40px;*/
 }
 
 .table_body a {

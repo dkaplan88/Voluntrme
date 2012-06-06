@@ -1,0 +1,31 @@
+<div class ="header">
+
+	<h1><%= link_to "Voluntr.ME", events_url %></h1>
+	
+	<div id="search">
+	  <form action="<%= events_url %>" method="get">
+	    <label for="keyword">Search:</label>
+	    <input type="search" name="keyword" placeholder="Search for cool stuff" size="30">
+	  </form>
+	
+				<p><%= image_tag current.image %></p>
+
+	  <% if session[:volunteer_id] %>
+			<ul>
+				<li>Logged in as <%=current.name%></li>
+				<li><%= link_to "My Profile Page", volunteer_url(session[:volunteer_id]) %> | <%= link_to "Log out", log_out_url %></li>
+			</ul>
+	  <% else %>
+			<ul>
+				<li><%= link_to "Sign up", new_volunteer_url %> or <%= link_to "log in", log_in_url  %></li>
+			</ul>
+	  <% end %>
+
+		<% if flash[:notice] %>
+		  <p class = "notice">
+		  <%= flash[:notice] %>
+		  </p>
+		<% end %>
+	</div>
+	<div class="clear"></div>
+</div>
