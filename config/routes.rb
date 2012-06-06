@@ -18,7 +18,7 @@ Voluntrme::Application.routes.draw do
    resources :sessions,      only: [:new, :create, :destroy]
   
   
-#  match '/auth/:provider/callback' => 'volunteers#create'
+  match '/auth/:provider/callback' => 'volunteers#create'
   
   get "log_in" => "sessions#new", :as => "log_in"
   post "log_in" => "sessions#create", :as => "create"
