@@ -1,21 +1,3 @@
-Pitch:
-
-I moved to Chicago a couple of months ago to do CodeAcademy.
-Besides emersing myself in the web development world, I wanted to be able to give back and volunteer a couple of hours.
-
-What I found was that finding a volunteer opportunity was hard.
-I didn't know where to begin and when I finally found a list of organizations and opportunities, I had no idea if the organization was legit and who I would be volunteering with.
-
-So I decided to create Voluntr.me
-Voluntr.me makes it easy for me to discover volunteer opportunities.  
-It allows me to see all of the upcoming volunteer events and learn about each organization.  
-Voluntr.me is also integrated with social networks so I can see all of the events and organizations my friends help out with and encourage my friends to join me when I signup for a event.
-
-We have not figured out a revenue model at thi
-
-
-
- 
 User Stories
 
 1.	I want to see a list of organizations I can volunteer at. 
