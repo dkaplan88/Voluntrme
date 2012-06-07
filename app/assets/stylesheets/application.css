@@ -5,6 +5,7 @@
 	margin: 0 auto -10px; 
 	position:relative; 
 	text-align:left; 
+	box-shadow: 2px 0px 2px gray, -2px 0px 2px gray;
 }
 
 html {
@@ -21,7 +22,7 @@ div.header div.clear {
 div.header {
 	background: red;
 	padding: 10px;
-	border-radius:5px;
+/*	border-radius:5px;*/
 }
 
 div.header a {
@@ -67,7 +68,7 @@ div.header p.notice {
 div.event {
 	padding:10px;
 	background: #00A523;
-	border-radius:10px;
+/*	border-radius:10px;*/
 }
 
 /*div.event div.left_sidebar {
