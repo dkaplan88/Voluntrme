@@ -8,8 +8,8 @@
 		  <% if session[:volunteer_id] %>
 				<ul>
 					<% unless current == nil %>
-					<li>Logged in as <%=current.name%></li>
-					<li><%= link_to "My Profile Page", volunteer_url(session[:volunteer_id]) %> | <%= link_to "Log out", log_out_url %></li>
+					<li>Logged in as<br> <%=current.name%></li><br>
+					<li><%= link_to "My Profile", volunteer_url(session[:volunteer_id]) %> <br> <%= link_to "Log out", log_out_url %></li>
 					<% end %>
 
 				</ul>
