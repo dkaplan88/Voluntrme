@@ -12,12 +12,12 @@ html {
 	background:#91F48C;
 }
 
-/*header*/
-
-
-div.header div.clear {
+.clear {
 	clear:both;
 }
+
+/*header*/
+
 
 div.header {
 	background: #B70000;
@@ -61,35 +61,33 @@ div.header {
 }
 
 /* event index */
+
 div.event {
 	width:960px;
 	background: #00A523;
-/*	border-radius:10px;*/
-}
-
-
-.facebook {
-	background:#0092B2;
-	background: -moz-linear-gradient(top, #00A4F4, #0092B2);
-	background: -ms-linear-gradient(top, #00A4F4, #0092B2);
-	background: -o-linear-gradient(top, #00A4F4, #0092B2);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#00A4F4), to(#0092B2));
-	background: -webkit-linear-gradient(top, #00A4F4, #0092B2);
-	background: linear-gradient(top, #00A4F4, #0092B2	);
-	float:left;
-	width:100px;
-	height:3300px;
-	li {
-		list-style:none;
+	.facebook {
+		background:#0092B2;
+		background: -moz-linear-gradient(top, #00A4F4, #0092B2);
+		background: -ms-linear-gradient(top, #00A4F4, #0092B2);
+		background: -o-linear-gradient(top, #00A4F4, #0092B2);
+		background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#00A4F4), to(#0092B2));
+		background: -webkit-linear-gradient(top, #00A4F4, #0092B2);
+		background: linear-gradient(top, #00A4F4, #0092B2	);
+		float:left;
+		width:100px;
+		height:3300px;
+		li {
+			list-style:none;
+		}
+	}
+	.table_body {
+		background:white;
+		float:left;
+		width:860px;
 	}
 }
 
-.table_body {
-	background:white;
-	float:left;
-	width:860px;
-}
-
+/* Table */
 
 table {
   width: 100%;
