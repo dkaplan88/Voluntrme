@@ -87,50 +87,34 @@ div.event {
 .table_body {
 	background:white;
 	float:left;
-	width:850px;
+	width:860px;
 }
 
-/*div.event div.left_sidebar {
-	float:left;
-	width:60px;
-	height:all;
-}
-
-div.event div.left_sidebar p {
-	margin-left:5px;
-	margin-right:5px;
-}*/
 
 table {
   width: 100%;
   border-top: solid 1px;
   margin-top: 24px;
-}
-
-table, td, th  {
-  border-collapse: collapse;
-  padding: 12px;
-}
-
-td a {
-	text-decoration:none;
-	color:blue;
-}
-
-td a:hover {
-	color:black;
-}
-
-th {
- 	border-top: solid 2px;
-	text-align:center;
-}
-
-tr {
-  border-bottom: solid 1px;
-}
-
-td {
-  color: blue;
-  text-align: center;
+	a {
+		text-decoration:none;
+		color:blue;
+	}
+	a:hover {
+		color:black;
+	}
+	td, th  {
+  	border-collapse: collapse;
+  	padding: 12px;
+	}
+	th {
+ 		border-top: solid 2px;
+		text-align:center;
+	}
+	tr {
+  	border-bottom: solid 1px;
+	}
+	td {
+  	color: blue;
+  	text-align: center;
+	}
 }
