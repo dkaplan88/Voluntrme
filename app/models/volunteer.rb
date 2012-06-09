@@ -12,6 +12,10 @@ class Volunteer < ActiveRecord::Base
   has_many :reverse_relationships, foreign_key: "followed_id", class_name: "Relationship", dependent: :destroy
   has_many :followers, through: :reverse_relationships, source: :follower
   
+  def feed
+     Registration.from_volunteers_followed_by(self)
+  end
+  
   def following?(other_volunteer)
     relationships.find_by_followed_id(other_volunteer.id)
   end

@@ -18,6 +18,9 @@
 					<li><%= link_to "Sign up", new_volunteer_url %> or <%= link_to "log in", log_in_url  %></li>
 				</ul>
 		  <% end %>
+		  
+		  <h2>Friend Feed</h2>
+		  <%= render "shared/feed" %> 
 		</div>
 	
 	<div class = "table_body">
@@ -39,6 +42,7 @@
 	  <% end %>
 	  </table>
 	</div>
+
 </div>
 
-<li><%= @event.name %></li>
+

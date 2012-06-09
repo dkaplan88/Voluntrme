@@ -2,6 +2,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :current_user
   
+  include SessionsHelper
+  
+  
   private
   
   # def current_user
