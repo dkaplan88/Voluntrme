@@ -1,5 +1,8 @@
 class EventsController < ApplicationController
   def index
+    @microposts = current_volunteer.events.build
+    @event = current_volunteer.feed
+    
     if params[:keyword].nil?
       @events = Event.all
     else
