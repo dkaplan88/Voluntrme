@@ -13,7 +13,7 @@ group :production do
   gem 'pg'
 end
 
-gem 'thin'
+#gem 'thin'
 gem 'quiet_assets'
 gem 'omniauth-facebook'
 gem 'fb_graph'
