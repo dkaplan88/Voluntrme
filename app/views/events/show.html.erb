@@ -1,38 +1,40 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @event.name %>
-</p>
+<div class="event_show">
+  <p>
+    <b>Name:</b>
+    <%= @event.name %>
+  </p>
 
-<p>
-  <b>Description:</b>
-  <%= @event.description %>
-</p>
+  <p>
+    <b>Description:</b>
+    <%= @event.description %>
+  </p>
 
-<p>
-  <b>Org:</b>
-  <%= @event.organization.name %>
-</p>
+  <p>
+    <b>Org:</b>
+    <%= @event.organization.name %>
+  </p>
 
-<p>
-  <b>Location:</b>
-  <%= @event.location %>
-</p>
+  <p>
+    <b>Location:</b>
+    <%= @event.location %>
+  </p>
 
-<p>
-  <b>Category:</b>
-  <%= @event.category %>
-</p>
+  <p>
+    <b>Category:</b>
+    <%= @event.category %>
+  </p>
 
-<h3><%= link_to "Sign Up for Event", new_registration_url(event_id: @event.id, volunteer_id: session[:volunteer_id]) %></h3>
+  <h3><%= link_to "Sign Up for Event", new_registration_url(event_id: @event.id, volunteer_id: session[:volunteer_id]) %></h3>
 
-<h4>List of the good people helping us out:</h4>
-<%@event.registrations.each do |r| %>
-<li><%= link_to r.volunteer.name, volunteer_url(r.volunteer_id)%></li>
+  <h4>List of the good people helping us out:</h4>
+  <%@event.registrations.each do |r| %>
+  <li><%= link_to r.volunteer.name, volunteer_url(r.volunteer_id)%></li>
 	
-<%end%><br>
+  <%end%><br>
 
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+  <%= link_to 'Edit', edit_event_path(@event) %> |
+  <%= link_to 'Back', events_path %>
+</div>

@@ -69,13 +69,14 @@ div.header {
 	float: left;
 	width: 762px;
 	background:white;
-	height:100%;
+	height:470px;
+	overflow:auto;
 	border-left: 198px solid #0092B2;
 	
 	
 	.table_field {
 		float: left;
-		width: 234px;
+		width: 229px;
 		height: 100px;
 		padding: 10px;
 		p {margin: 0;
@@ -110,6 +111,10 @@ div.header {
 		h2 {
 			text-align:center;
 		}
+}
+
+.event_show {
+	background:white;
 }
 
 /* Table */
