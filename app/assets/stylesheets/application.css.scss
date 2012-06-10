@@ -2,10 +2,8 @@
 
 #wrapper { 
 	width:960px; 
-	margin: 0 auto -10px; 
-	position:relative; 
-	text-align:left; 
-	box-shadow: 2px 0px 2px gray, -2px 0px 2px gray;
+	margin: 0 auto; 
+	height:100%;
 }
 
 html {
@@ -62,9 +60,30 @@ div.header {
 
 /* event index */
 
-div.event {
-	width:960px;
+.event {
 	background: #00A523;
+	height:100%;
+}
+	
+.main {
+	float: left;
+	width: 762px;
+	background:white;
+	height:100%;
+	border-left: 198px solid #0092B2;
+	
+	
+	.table_field {
+		float: left;
+		width: 234px;
+		height: 100px;
+		padding: 10px;
+		p {margin: 0;
+			padding: 0;
+		}
+	}
+}
+	
 	.facebook {
 		background:#0092B2;
 		background: -moz-linear-gradient(top, #00A4F4, #0092B2);
@@ -74,8 +93,10 @@ div.event {
 		background: -webkit-linear-gradient(top, #00A4F4, #0092B2);
 		background: linear-gradient(top, #00A4F4, #0092B2	);
 		float:left;
-		width:200px;
-		height:3300px;
+		width:198px;
+		height:100%;
+		margin-right:-198px;		
+		position:relative;
 		p {
 			margin:18px;
 		}
@@ -89,12 +110,6 @@ div.event {
 		h2 {
 			text-align:center;
 		}
-	}
-	.table_body {
-		background:white;
-		float:left;
-		width:760px;
-	}
 }
 
 /* Table */
@@ -102,7 +117,6 @@ div.event {
 table {
   width: 100%;
   border-top: solid 1px;
-  margin-top: 24px;
 	a {
 		text-decoration:none;
 		color:blue;

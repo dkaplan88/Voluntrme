@@ -6,43 +6,29 @@
 			<% end %>
 
 		  <% if session[:volunteer_id] %>
-				<ul>
 					<% unless current == nil %>
-					<li>Logged in as<br> <%=current.name%></li><br>
-					<li><%= link_to "My Profile", volunteer_url(session[:volunteer_id]) %> <br> <%= link_to "Log out", log_out_url %></li>
+					<p>Logged in as <%=current.name%></p>
+					<p><%= link_to "My Profile", volunteer_url(session[:volunteer_id]) %></p>
+					<p><%= link_to "Log out", log_out_url %></p>
 					<% end %>
-
-				</ul>
 		  <% else %>
-				<ul>
-					<li><%= link_to "Sign up", new_volunteer_url %> or <%= link_to "log in", log_in_url  %></li>
-				</ul>
+				<p><%= link_to "Sign up", new_volunteer_url %> or <%= link_to "log in", log_in_url  %></p>
 		  <% end %>
 		  
 		  <h2>Friend Feed</h2>
 		  <%= render "shared/feed" %> 
-		</div>
+	</div> <!-- facebook -->
 	
-	<div class = "table_body">
-	  <table>
-	    <tr>
-	      <th>Name</th>
-	      <th>Organization</th>
-	      <th>Location</th>
-	      <th>Category</th>
-	    </tr>
-
-	  <% @events.each do |event| %>
-	    <tr>
-	      <td><%= link_to event.name, event %></td>
-	      <td><%= event.organization.name %></td>
-	      <td><%= event.location %></td>
-	      <td><%= event.category %></td>
-	    </tr>
-	  <% end %>
-	  </table>
-	</div>
-
-</div>
+  <div class="main">
+			<% @events.each do |event| %>
+				<div class="table_field">	
+			      <p><%= link_to event.name, event %></p>
+						<p><%= event.organization.name %></p>
+			      <p><%= event.location %></p>
+			      <p><%= event.category %></p> 		
+				</div>
+	  	<% end %>
+  </div> <!-- main -->
+</div> <!-- event -->
 
 
