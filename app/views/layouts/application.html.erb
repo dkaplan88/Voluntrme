@@ -12,6 +12,8 @@
 <body>
 		<%= render 'layouts/header', :except => "landings/index.html.erb" %>	
 <%= yield %>
+<%= render 'layouts/footer', :except => "landings/index.html.erb" %>	
+
 </body>
 	</div>
 </html>
