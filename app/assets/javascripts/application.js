@@ -14,4 +14,3 @@
 //= require jquery_ujs
 //= require_self
 //= require_tree .
-$(".facebook").style.height = (".main").style.height;

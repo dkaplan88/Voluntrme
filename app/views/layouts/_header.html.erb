@@ -1,19 +1,25 @@
 <div class ="header">
 
-	<h1><%= link_to "VOLUNTR.ME", events_url %></h1>
-	
-	<div id="search">	<form action="<%= events_url %>" method="get">
-		    <label for="keyword"></label>
-		    <input type="search" name="keyword" placeholder="Search" color="black" size="30">
-		  </form><br><br>
-	<%= link_to "Help", "#" %>  <%= link_to "Log Out", "#" %>
+  <div class="h1">	
+    <h1><%= link_to "Voluntr.", events_url %><span class="c"><%= link_to "me", events_url %></span></h1>
+  </div>	
+  
+  <div class="facebook">	
+
+	  <% if session[:volunteer_id] %>
+				<% unless current == nil %>
+				<p><%= image_tag current.image %> Hi <%=current.name%>! | <%= link_to "Account", "#" %></p>
+				<% end %>
+	  <% else %>
+			<p><%= link_to "Sign up", new_volunteer_url %> | <%= link_to "log in", log_in_url  %></p>
+	  <% end %>
 	</div>
 
-		<% if flash[:notice] %>
-		  <p class = "notice">
-		  <%= flash[:notice] %>
-		  </p>
-		<% end %>
-	
 	<div class="clear"></div>
+
+	<div id ="search">
+  	<p><%= link_to "Contact us", "#" %></p>
+  	<p><%= link_to "About us", "#" %></p> 
+  	<p><%= link_to "Friend Feed", "#" %></p>
+	</div>
 </div>

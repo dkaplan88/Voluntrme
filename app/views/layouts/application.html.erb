@@ -10,9 +10,11 @@
 </head>
 
 <body>
-		<%= render 'layouts/header', :except => "landings/index.html.erb" %>	
+		<%= render 'layouts/header' %>	
+
 <%= yield %>
-<%= render 'layouts/footer', :except => "landings/index.html.erb" %>	
+  
+  <%= render 'layouts/footer' %>	
 
 </body>
 	</div>

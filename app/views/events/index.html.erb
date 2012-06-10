@@ -1,31 +1,14 @@
 <div class="event"> 
 	
-	<div class="facebook">		
-			<% unless current == nil %>
-					<p><%= image_tag current.image %></p>
-			<% end %>
-
-		  <% if session[:volunteer_id] %>
-					<% unless current == nil %>
-					<p>Logged in as <%=current.name%></p>
-					<p><%= link_to "My Profile", volunteer_url(session[:volunteer_id]) %></p>
-					<p><%= link_to "Log out", log_out_url %></p>
-					<% end %>
-		  <% else %>
-				<p><%= link_to "Sign up", new_volunteer_url %> or <%= link_to "log in", log_in_url  %></p>
-		  <% end %>
-		  
-		  <h2>Friend Feed</h2>
-		  <%= render "shared/feed" %> 
-	</div> <!-- facebook -->
-	
   <div class="main">
+  
 			<% @events.each do |event| %>
 				<div class="table_field">	
-			      <p><%= link_to event.name, event %></p>
-						<p><%= event.organization.name %></p>
-			      <p><%= event.location %></p>
-			      <p><%= event.category %></p> 		
+			      <h2>Best Event Ever</h2>
+						<p>Loren ipsum text for the win and now it is done or is it maybe now its fun!</p>
+            <p><%= link_to "More", event %></p><br>
+						<p> MWF 7am -9am</p>	
+			      <p>F(icon) <button type="button"><%= link_to "Register", new_registration_url(event_id: event.id, volunteer_id: session[:volunteer_id]) %></button></p>		
 				</div>
 	  	<% end %>
   </div> <!-- main -->
