@@ -45,6 +45,7 @@ table {
 body {
   font-family: helvetica;
   height: 45px;
+	width:100%;
 }
 
 .stuff {
@@ -95,7 +96,6 @@ header h1 a {
   text-decoration: none;
 }
 header ul {
-  float: left;
   margin: 0 0 0 45px;
 }
 header li {
@@ -113,7 +113,7 @@ header li a {
 .blank_box {
 	background: #013D59;
 	height: 360px;
-	width: auto;
+	width: 100%;
 	position: top;
 }
 
