@@ -1,23 +1,26 @@
-<%= render 'shared/stats' %>
+<div class="event_show">
 
-<!-- if signed_in? -->
-<%= render 'follow_form'  %>
 
-<% if session[:volunteer_id] == @volunteer.id %>
+  <% if session[:volunteer_id] == @volunteer.id %>
 
-<h1>Hello <%= @volunteer.first_name %></h1>
-<p><b>Name:</b> <%= @volunteer.first_name %> <%= @volunteer.last_name %></p>
-<p><b>Email:</b> <%= @volunteer.email %></p>
-<p><b>Phone:</b> <%= @volunteer.phone_number %></p><br>
+    <p><%= image_tag current.image %> Hi <%=current.name%>!</p>
+    <p><b>Email:</b> <%= @volunteer.email %></p><br>
 
-<h3>You are volunteering at the following events:</h3>
+    <%= render 'shared/stats' %>
 
-	<% @volunteer.registrations.each do |r| %>
-	<p>	
-		<p><%= link_to r.event.name, event_url(r.event.id)%></p>
-	</p>
-	<%end%>
+    <!-- if signed_in? -->
+    <%= render 'follow_form'  %>
+    
+  <h3>You are volunteering at the following events:</h3>
 
-<%end%>
+  	<% @volunteer.registrations.each do |r| %>
+  	<p>	
+  		<p><%= link_to r.event.name, event_url(r.event.id)%></p>
+  	</p>
+  	<%end%>
 
-<p><%= link_to "Organizations", organizations_url%> | <%= link_to "Events", events_url %></p>
+  <%end%>
+  <br>
+
+  <p><%= link_to "Events", events_url %></p>
+</div>
