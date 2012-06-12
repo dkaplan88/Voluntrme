@@ -10,54 +10,13 @@
 <p><b>Email:</b> <%= @volunteer.email %></p>
 <p><b>Phone:</b> <%= @volunteer.phone_number %></p><br>
 
-<p>You are volunteering at the following events:<br><br>
+<h3>You are volunteering at the following events:</h3>
 
-<table>
-	<tr>
-		<th>Event Name</th>
-		<th>Organization</th>
-		<th>Date and Time</th>
-	</tr>
 	<% @volunteer.registrations.each do |r| %>
-	<tr>	
-		<td><%= link_to r.event.name, event_url(r.event.id)%></td>
-		
-		<% @volunteer.events.each do |e| %>	
-		<td><%= link_to e.organization.name, organization_url(e.organization_id)%></td>
-		<% end %>
-		
-		<td>#</td>
-	</tr>
+	<p>	
+		<p><%= link_to r.event.name, event_url(r.event.id)%></p>
+	</p>
 	<%end%>
-	
-</table>
-
-<%else%>
-
-<p><b>Name:</b> <%= @volunteer.first_name %> <%= @volunteer.last_name %></p>
-
-<p><b><%=@volunteer.first_name%></b> is volunteering at the following events:<br><br>
-
-<table>
-	<tr>
-		<th>Event Name</th>
-		<th>Organization</th>
-		<th>Date and Time</th>
-	</tr>
-	<% @volunteer.registrations.each do |r| %>
-	<tr>	
-		<td><%= link_to r.event.name, event_url(r.event.id)%></td>
-		
-		<% @volunteer.events.each do |e| %>	
-		<td><%= link_to e.organization.name, organization_url(e.organization_id)%></td>
-		<% end %>
-		
-		<td>#</td>
-	</tr>
-	
-	<%end%>
-	
-</table>
 
 <%end%>
 
