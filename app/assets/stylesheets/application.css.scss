@@ -55,6 +55,9 @@ div.header {
 			a {
 				color:gray;
 			}
+			a:hover {
+				text-decoration:underline;
+			}
 		}
 	}
 	#search {
@@ -68,6 +71,9 @@ div.header {
 			color:gray;
 			margin-left:20px;
 			margin-bottom:0;
+		}
+		a:hover {
+			text-decoration:underline;
 		}
 	}
 }
