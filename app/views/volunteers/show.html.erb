@@ -18,7 +18,20 @@
   		<p><%= link_to r.event.name, event_url(r.event.id)%></p>
   	</p>
   	<%end%>
+    
+    <% else %>
+    
+    <p> <%= @volunteer.image %></p>
+    <p> <%= @volunteer.name %></p>
+    <p><b>Email:</b> <%= @volunteer.email %></p><br>
+    
+    <h3><%= @volunteer.name %> is volunteering at the following events:</h3>
 
+    	<% @volunteer.registrations.each do |r| %>
+    	<p>	
+    		<p><%= link_to r.event.name, event_url(r.event.id)%></p>
+    	</p>
+    	<% end %>
   <%end%>
   <br>
 
