@@ -1,4 +1,4 @@
-<div class="event"> 
+<div class="body"> 
 	
   <div class="main">
   
@@ -8,7 +8,7 @@
 						<p>Loren ipsum text for the win and now it is done or is it maybe now its fun!</p>
             <p><%= link_to "More", event %></p><br>
 						<p> MWF 7am -9am</p>	
-			      <p>F(icon) <button type="button"><%= link_to "Register", new_registration_url(event_id: event.id, volunteer_id: session[:volunteer_id]) %></button></p>		
+			      <p class="register">F(icon) <button type="button"><%= link_to "Register", new_registration_url(event_id: event.id, volunteer_id: session[:volunteer_id]) %></button></p>		
 				</div>
 	  	<% end %>
   </div> <!-- main -->
