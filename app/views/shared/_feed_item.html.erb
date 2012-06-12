@@ -1,4 +1,5 @@
-<p id="<%= feed_item.id %>">
-    <p><%= image_tag "#{feed_item.volunteer.image}" %> <%= feed_item.volunteer.name %></p>
-    <p><%= feed_item.event.name %></p>
+<p class="feed_item" id="<%= feed_item.id %>" >
+    <p><%= image_tag "#{feed_item.volunteer.image}" %> <%= link_to feed_item.volunteer.name,            volunteer_path(feed_item.volunteer.id) %></p>
+    <p><%= link_to feed_item.event.name, event_path(feed_item.event.id) %></p>
+    <button type="button"><%= link_to "Register", new_registration_url(event_id: feed_item.event.id, volunteer_id: session[:volunteer_id]) %></button><br><br>
 </p>

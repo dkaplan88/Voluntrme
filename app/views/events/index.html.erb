@@ -1,10 +1,15 @@
 <div class="body"> 
-	
+
   <div class="main">
-  
+    <div class="table_field">
+      <div class="feed">
+        <h3>Volunteer with your friends!</h3>
+  	    <%= render "shared/feed" %>
+  	  </div>  
+  	</div>    
 			<% @events.each do |event| %>
 				<div class="table_field">	
-			      <h2>Best Event Ever</h2>
+			      <h3>Best Event Ever</h3>
 						<p>Loren ipsum text for the win and now it is done or is it maybe now its fun!</p>
             <p><%= link_to "More", event %></p><br>
 						<p> MWF 7am -9am</p>	
