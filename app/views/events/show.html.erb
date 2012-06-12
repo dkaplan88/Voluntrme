@@ -1,36 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<div class="event_show">
-  <p>
-    <b>Name:</b>
-    <%= @event.name %>
-  </p>
 
+<div class="event_show">
+  <h2>
+    <%= @event.name %>
+  </h2>
   <p>
     <b>Description:</b>
     <%= @event.description %>
   </p>
-
   <p>
-    <b>Org:</b>
+    <b>Organization:</b>
     <%= @event.organization.name %>
   </p>
-
   <p>
     <b>Location:</b>
     <%= @event.location %>
   </p>
-
   <p>
     <b>Category:</b>
     <%= @event.category %>
   </p>
-
-  <h3><%= link_to "Sign Up for Event", new_registration_url(event_id: @event.id, volunteer_id: session[:volunteer_id]) %></h3>
-
+<button type="button"><%= link_to "Register", new_registration_url(event_id: @event.id, volunteer_id: session[:volunteer_id]) %></button>
   <h4>List of the good people helping us out:</h4>
   <%@event.registrations.each do |r| %>
-  <li><%= link_to r.volunteer.name, volunteer_url(r.volunteer_id)%></li>
+  <li><%= image_tag r.volunteer.image %> <%= link_to r.volunteer.name, volunteer_url(r.volunteer_id)%></li>
 	
   <%end%><br>
 
