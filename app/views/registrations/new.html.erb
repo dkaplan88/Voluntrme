@@ -1,9 +1,9 @@
 <h1>Thank you for Signing Up!</h1>
 
-<%@registration.event_id = params[:event_id]%>
-<%@registration.volunteer_id = session[:volunteer_id]%>
-<%@registration.save%>
+<% @registration.event_id = params[:event_id]%>
+<% @registration.volunteer_id = session[:volunteer_id]%>
+<% @registration.save%>
 
 <%= link_to "My Profile", volunteer_path(session[:volunteer_id]) %>
 
-<p><%= link_to "Organizations", organizations_url%> | <%= link_to "Events", events_url %></p>
+<p><%= link_to "More Events", events_url %></p>
