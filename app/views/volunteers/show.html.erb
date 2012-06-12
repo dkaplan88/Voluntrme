@@ -21,9 +21,14 @@
     
     <% else %>
     
-    <p> <%= @volunteer.image %></p>
+    <p> <%= image_tag @volunteer.image %></p>
     <p> <%= @volunteer.name %></p>
     <p><b>Email:</b> <%= @volunteer.email %></p><br>
+    
+    <%= render 'shared/stats' %>
+
+    <!-- if signed_in? -->
+    <%= render 'follow_form'  %>
     
     <h3><%= @volunteer.name %> is volunteering at the following events:</h3>
 
