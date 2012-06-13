@@ -15,7 +15,7 @@
 
   	<% @volunteer.registrations.each do |r| %>
   	<p>	
-  		<p><%= link_to r.event.name, event_url(r.event.id)%></p>
+  		<p><%= link_to r.event.name, event_url(r.event.id)%> | <%= link_to "Cancel Reservation", registration_url(r.id), :method => :delete %></p>
   	</p>
   	<%end%>
     
@@ -34,7 +34,7 @@
 
     	<% @volunteer.registrations.each do |r| %>
     	<p>	
-    		<p><%= link_to r.event.name, event_url(r.event.id)%></p>
+    		<p><%= link_to r.event.name, event_url(r.id)%></p>
     	</p>
     	<% end %>
   <%end%>
