@@ -23,7 +23,7 @@ div.header {
 	padding: 10px;
 	border-radius:5px;
 	box-shadow: 0px 0px 10px gray;
-	height:100px;
+	height:170px;
 	.h1 {
 		float:left;
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -50,11 +50,11 @@ div.header {
 	.facebook {
 			float:right;
 		p {
-			color:gray;
+			color:black;
 			margin:0;
 			padding:0;
 			a {
-				color:gray;
+				color:red;
 			}
 			a:hover {
 				text-decoration:underline;
@@ -69,7 +69,7 @@ div.header {
 			padding:0;
 		}
 		a {
-			color:gray;
+			color:red;
 			margin-left:20px;
 			margin-bottom:0;
 		}
