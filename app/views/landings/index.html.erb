@@ -1,13 +1,30 @@
-<div class="stuff">
-      <header>
-          <h2>Login: <%= link_to image_tag('facebook_32.png'), new_volunteer_url %></h2>
-          <p>You like your <span>friends</span>.</p> 
-          <p>You like helping <span>others</span>.</p>
-          <p>Let's do both.</p>
-          <h1>Voluntr.<span>Me</span></h1>
-      </header>
-      
-      <div class="blank_box"></div>
-      
+<div class="main">
+  <div class="d">
+    <div class="eheadline">
+      <%= image_tag('logo.png', size: '300x140') %>
+    </div>
+    <div class="f">
+      <p>Make A Difference Today!</p>
+    </div>
+  </div>  
+  <div class="eimg">
+    <%= link_to image_tag('jump.png'),  new_volunteer_url %>
+  </div>
+    <div class="e">
+      <div class="ee">
+        <p><%= link_to "About Us", "#" %></p><br>
+        <p><%= link_to "Contact Us", "#" %></p><br>
+        <p><%= link_to "Privacy", "#" %></p><br>
+        <p><%= link_to "Terms", "#" %></p><br>
+        <p><%= link_to "Jobs", "#" %></p>
+      </div>
+      <div class="ehome">
+        <h1>A Sample of Our Events</h1>
+          <% @event.each do |e| %>
+            <p> <%= link_to e.name, event_url(e.id) %></p>
+            <p><%= e.date %></p>
+            <br>
+        <% end %>
+      </div>
+    </div>
 </div>
-    

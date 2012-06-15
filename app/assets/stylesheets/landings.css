@@ -150,3 +150,53 @@ nav a {
   float: left;
   color: black;
 }
+
+.eimg {
+	text-align:center;
+}
+
+.main {
+	background:white;
+}
+
+.f {
+	float:left;
+	font-size:20px;
+	margin-left:580px;
+}
+
+.eheadline {
+	background:white;
+	float:left;
+}
+.e {
+	width:1300px;
+	background:orange;
+}
+.ee {
+	width:200px;
+	float:left;
+	background:orange;
+	margin-left:200px;
+}
+
+.ee a {
+	color:white;
+	text-decoration:none;
+}
+
+.ehome {
+	background:white;
+	margin-left:530px;
+	text-align:center;
+	background:orange;
+}
+
+.ehome a {
+	color:red;
+	text-decoration:none;
+}
+
+.ehome h1 {
+	font-size:30px;
+}

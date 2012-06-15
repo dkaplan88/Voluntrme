@@ -1,44 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="event_show">
 
-<p>
-  <b>Category:</b>
-  <%= @organization.category %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @organization.name %>
-</p>
+  <p>
+    <b>Name:</b>
+    <%= @organization.name %>
+  </p>
 
-<p>
-  <b>Location:</b>
-  <%= @organization.location %>
-</p>
+  <p>
+    <b>Location:</b>
+    <%= @organization.location %>
+  </p>
 
-<p>
-  <b>Contact:</b>
-  <%= @organization.contact %>
-</p>
+  <p>
+    <b>Contact:</b>
+  </p>
 
-<p>
-  <b>Phone:</b>
-  <%= @organization.phone %>
-</p>
-<br>
-<h2>Events:</h2>
-<table>
-	<tr>
-		<th>Name</th>
-		<th>Description</th>
-		<th>Location</th>
-	</tr>
-<% @organization.events.each do |e| %>
-	<tr>
-		<td><%= link_to e.name, event_url(e.id) %></td>
-		<td><%= e.description %></td>
-		<td><%= e.location %></td>
-	</tr>
-<% end %>
-</table>
-<%= link_to 'Edit', edit_organization_path(@organization) %> |
-<%= link_to 'Back', organizations_path %>
+  <p>
+    <b>Phone:</b>
+    <%= @organization.phone %>
+  </p>
+  <br>
+  <h2>Events:</h2>
+    <% @organization.events.each do |e| %>
+      <p><%= link_to e.name, event_url(e.id) %></p>
+    <% end %><br>
+</div>
