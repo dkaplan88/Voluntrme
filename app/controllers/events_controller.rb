@@ -16,7 +16,8 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-
+    @json = @event.to_gmaps4rails
+    
     respond_to do |format|
       format.html 
       format.json { render json: @event }

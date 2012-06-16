@@ -33,10 +33,16 @@ Organization.create name: "Aspire of Illinois", website: "http://www.aspireofill
 # Event: name, date, location, description, contact_name, phone, organization_id
 
 
-Event.create name:"Work Day at Howard Street Farm", date: "Thu Jun 21, 2012, 09:30 AM - 11:30 AM", location:"Howard Street Farm, 3701 Howard
-Skokie, IL60076", description: "Help us prepare our Demonstration Garden at the Howard Street Farm! We are moving wood chips, building raised beds, and doing other physical work, come joing the fun!
-Please bring shovels, garden hoes, garden rakes (not leaf rakes) and gloves if you have them. Please dress accordingly for the weather. No flip flops or sandals please. Bring a water bottle.
-", contact_name: "Linda", phone: "(847)651-1197", organization_id: '1'
+e =Event.new
+e.name = "Work Day at Howard Street Farm"
+e.date ="Thu Jun 21, 2012, 09:30 AM - 11:30 AM"
+e.location = "Howard Street Farm, 3701 Howard Skokie, IL 60076" 
+e.description = "Help us prepare our Demonstration Garden at the Howard Street Farm! We are moving wood chips, building raised beds, and doing other physical work, come joing the fun!
+Please bring shovels, garden hoes, garden rakes (not leaf rakes) and gloves if you have them. Please dress accordingly for the weather. No flip flops or sandals please. Bring a water bottle." 
+e.contact_name = "Linda" 
+e.phone = "(847)651-1197"
+e.organization_id = '1'
+e.save
 
 Event.create name:"Fathers Day Community Gardening", date: 'Fri Jun 22, 2012, 01:00 PM - 05:00 PM',  location:"8918 S. Green St.
 Chicago, IL60620", description: "Celebrate Father's Day by volunteering with your kids at the Gaia produce farm, community garden. Volunteers will plant seeds, turn compost, and dig in the dirt. Work with us as we transform our garden into a mini-food producing farm. Come check out the raised bed and hoop house volunteers built last year.", contact_name: "Alex Curry",
@@ -46,9 +52,16 @@ Event.create name:"Volunteer at a 5k event", date: "Sat Jun 23, 2012, 07:00 AM -
  Brookfield, IL60513", description: "We are seeking volunteers for the day of the race: traffic safety w/police department, registration, goody bag hand out, obstacles and aid stations at various locations, holding wave signs at start and finish line, and post-race party sign-in people. Volunteers need to arrive at 7am, sign-in volunteers please arrive at 6:30am.", 
  contact_name: "Anna Marie MacDonald", phone: "(708)354-4547x112 ", organization_id: "3"
  
-Event.create name:"5th Anniversary Basketball Tournament", date: "Sat Jun 23, 2012, 10:00 AM - 04:00 PM", location:" 246A W. 95th Street-Lowden Homes Basketball court
- Chicago, IL60628", description: "Assist UCAN in making its 5th Annual LTU Basketball Tournament a success. Volunteers are needed for carnival games, registration and food service.
- This event takes place on Saturday, June 23 from 10 am- 4 pm, shift are available from 10 am-1 pm and 1-4 pm. Dress casual, wear your gym shoes and join in the fun!", contact_name: "Ellen Acevedo", phone: "312-669-8200 Ext. 2316", organization_id: "4"
+e = Event.new
+e.name = "5th Anniversary Basketball Tournament"
+e.date = "Sat Jun 23, 2012, 10:00 AM - 04:00 PM"
+e.location = " 246A W. 95th Street-Lowden Homes Basketball court Chicago, IL 60628" 
+e.description = "Assist UCAN in making its 5th Annual LTU Basketball Tournament a success. Volunteers are needed for carnival games, registration and food service.
+ This event takes place on Saturday, June 23 from 10 am- 4 pm, shift are available from 10 am-1 pm and 1-4 pm. Dress casual, wear your gym shoes and join in the fun!"
+e.contact_name = "Ellen Acevedo" 
+e.phone = "312-669-8200 Ext. 2316" 
+e.organization_id = "4"
+e.save
 
 Event.create name:"Fun Aspire Golf Class", date: "Mon Jun 25, 2012, 09:00 AM - 07:00 PM", location: "
  2800 Midwest Road

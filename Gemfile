@@ -10,13 +10,14 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+#  gem 'pg'
 end
 
 #gem 'thin'
 gem 'quiet_assets'
 gem 'omniauth-facebook'
 gem 'fb_graph'
+gem 'gmaps4rails'
 
 gem 'will_paginate', '3.0.3'
 gem 'faker', '1.0.1'

@@ -54,6 +54,7 @@ GEM
       httpclient (>= 2.2.0.2)
       rack-oauth2 (>= 0.14.4)
       tzinfo
+    gmaps4rails (1.5.2)
     hashie (1.2.0)
     hike (1.2.1)
     httpauth (0.1)
@@ -83,7 +84,6 @@ GEM
     omniauth-oauth2 (1.0.2)
       oauth2 (~> 0.6.0)
       omniauth (~> 1.0)
-    pg (0.13.2)
     polyglot (0.3.3)
     quiet_assets (1.0.1)
       railties (~> 3.1)
@@ -148,9 +148,9 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   faker (= 1.0.1)
   fb_graph
+  gmaps4rails
   jquery-rails
   omniauth-facebook
-  pg
   quiet_assets
   rails (= 3.2.3)
   sass-rails (~> 3.2.3)
