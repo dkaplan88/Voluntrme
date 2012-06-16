@@ -171,12 +171,12 @@ nav a {
 }
 .e {
 	width:1300px;
-	background:orange;
+	background:#F9A31A;
 }
 .ee {
 	width:200px;
 	float:left;
-	background:orange;
+	background:#F9A31A;
 	margin-left:200px;
 }
 
@@ -189,7 +189,7 @@ nav a {
 	background:white;
 	margin-left:530px;
 	text-align:center;
-	background:orange;
+	background:#F9A31A;
 }
 
 .ehome a {
@@ -199,4 +199,8 @@ nav a {
 
 .ehome h1 {
 	font-size:30px;
+}
+
+.f {
+	color:#3853A3;
 }
